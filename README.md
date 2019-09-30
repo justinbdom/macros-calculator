@@ -1,5 +1,3 @@
-# Macros Calculator 
-
 ## Introduction
 
 ## Overview
