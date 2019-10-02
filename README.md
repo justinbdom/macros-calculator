@@ -6,9 +6,9 @@
 
 Health and fitness enthusiasts who need calculate and monitor macros.
 
-[User stories](docs/user-stories.md)
-Entity Relationship Diagram](docs/erd.md)
-# First milestone
+###[User stories](docs/user-stories.md)
+###[Entity Relationship Diagram](docs/erd.md)
+###[]
 
 * [x] Description
 * [x] Intended users &amp; user stories
