@@ -8,7 +8,7 @@ Health and fitness enthusiasts who need calculate and monitor macros.
 
 ###[User stories](docs/user-stories.md)
 ###[Entity Relationship Diagram](docs/erd.md)
-###[]
+###[Wireframe Diagram](docs/wireframe.md)
 
 * [x] Description
 * [x] Intended users &amp; user stories
