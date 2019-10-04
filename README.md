@@ -1,6 +1,6 @@
 ## Introduction
 
-## Overview
+## Overview This app is great for fast results in the gym or outside, if you follow the plans and workouts simplified for each trainee. Each body type and activity level will give some great food ideas to maintain strength and build lean muscle or build size. Indoor and outdoor workouts available. 
 
 ## Intended Users 
 
