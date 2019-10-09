@@ -12,6 +12,6 @@ Health and fitness enthusiasts who need calculate and monitor macros.
 
 * [x] Description
 * [x] Intended users &amp; user stories
-* [] Entity-relationship diagrams (ERDs)
-* [] Wireframes
+* [x] Entity-relationship diagrams (ERDs)
+* [x] Wireframes
 * [] User Stories
