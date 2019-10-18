@@ -8,6 +8,16 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 import java.util.Date;
 
+@Entity(
+    foreignKeys = {
+        @ForeignKey(
+            entity = Food.class,
+            childColumns = "food_id",
+            parentColumns = "food_id"
+        )
+    }
+)
+
 public class FoodType {
 
 }
