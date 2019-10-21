@@ -27,4 +27,63 @@ import java.util.Date;
 
 public class Food {
 
+  @PrimaryKey(autoGenerate = true)
+  @ColumnInfo(name = "food_id")
+  private long id;
+
+  @NonNull
+  @ColumnInfo(index = true)
+  private Date created = new Date();
+
+  @NonNull
+  @ColumnInfo(index = true)
+  private Date updated = new Date();
+
+  @ColumnInfo(name = "food_type_id", index = true)
+  private Long foodTypeId;
+
+  @ColumnInfo(name = "trainee_id", index = true)
+  private Long traineeId;
+
+  public long getId() {
+    return id;
+  }
+
+  public void setId(long id) {
+    this.id = id;
+  }
+
+  @NonNull
+  public Date getCreated() {
+    return created;
+  }
+
+  public void setCreated(@NonNull Date created) {
+    this.created = created;
+  }
+
+  public Date getUpdated() {
+    return updated;
+  }
+
+  public void setUpdated(@NonNull Date updated) {
+    this.updated = updated;
+  }
+
+  public Long getFoodTypeId() {
+    return foodTypeId;
+  }
+
+  public void setFoodTypeId(Long foodTypeId) {
+    this.foodTypeId = foodTypeId;
+  }
+
+  public Long getTraineeId() {
+    return traineeId;
+  }
+
+  public void setTraineeId(Long traineeId) {
+    this.traineeId = traineeId;
+  }
+
 }
