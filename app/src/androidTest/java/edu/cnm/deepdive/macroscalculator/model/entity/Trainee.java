@@ -8,6 +8,7 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 import java.util.Date;
 
+@Entity
 public class Trainee {
 
   @PrimaryKey(autoGenerate = true)
@@ -18,8 +19,8 @@ public class Trainee {
   @NonNull
   private Date created = new Date();
 
-  @ColumnInfo(name = "trainee_id", index = true)
-  private Long trainee_id;
+  @NonNull
+  private String name;
 
   public long getId() { return id; }
 
@@ -30,4 +31,16 @@ public class Trainee {
 
   @NonNull Date getCreated() { return created; }
 
+  public void setCreated(@NonNull Date created) {
+    this.created = created;
+  }
+
+  @NonNull
+  public String getName() {
+    return name;
+  }
+
+  public void setName(@NonNull String name) {
+    this.name = name;
+  }
 }
