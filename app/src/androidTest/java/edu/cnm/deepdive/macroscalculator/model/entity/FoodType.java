@@ -31,6 +31,18 @@ public class FoodType {
   @ColumnInfo(index = true)
   private Date created = new Date();
 
+  @NonNull
+  private String name;
+
+  @NonNull
+  public String getName() {
+    return name;
+  }
+
+  public void setName(@NonNull String name) {
+    this.name = name;
+  }
+
   public long getId() { return id; }
 
   public void setId(long id) { this.id = id; }

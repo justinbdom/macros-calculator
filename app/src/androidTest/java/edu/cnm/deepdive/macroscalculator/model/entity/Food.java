@@ -24,26 +24,32 @@ import java.util.Date;
         )
     }
 )
-
 public class Food {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "food_id")
   private long id;
-
   @NonNull
   @ColumnInfo(index = true)
   private Date created = new Date();
-
+  @NonNull
+  private String name;
   @NonNull
   @ColumnInfo(index = true)
   private Date updated = new Date();
-
   @ColumnInfo(name = "food_type_id", index = true)
   private Long foodTypeId;
-
   @ColumnInfo(name = "trainee_id", index = true)
   private Long traineeId;
+
+  @NonNull
+  public String getName() {
+    return name;
+  }
+
+  public void setName(@NonNull String name) {
+    this.name = name;
+  }
 
   public long getId() {
     return id;
