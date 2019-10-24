@@ -23,6 +23,12 @@ public class Activity {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "activity_id")
+  private long id;
 
+  private int workout_duration;
+
+  public String activityName;
+
+  public String activityType;
 
 }

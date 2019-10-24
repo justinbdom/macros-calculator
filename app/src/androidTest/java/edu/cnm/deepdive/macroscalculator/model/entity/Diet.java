@@ -18,9 +18,9 @@ import java.util.Date;
     }
 )
 
-public class FoodType {
+public class Diet {
   @PrimaryKey(autoGenerate = true)
-  @ColumnInfo(name = "food_type_id")
+  @ColumnInfo(name = "diet_id")
   private long id;
 
   @NonNull

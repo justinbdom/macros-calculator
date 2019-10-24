@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public interface FoodTypeDao {
+public interface DietDao {
 
 @Insert
 LiveData<Long> insert(Collection<FoodType> FoodTypes);

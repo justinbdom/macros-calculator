@@ -22,6 +22,10 @@ public class Trainee {
   @NonNull
   private String name;
 
+  private int lbsToGain;
+
+  private int lbsToLose;
+
   public long getId() { return id; }
 
   public void setId(long id) {

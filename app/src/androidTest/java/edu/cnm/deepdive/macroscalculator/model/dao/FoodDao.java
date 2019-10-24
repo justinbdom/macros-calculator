@@ -5,7 +5,7 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 import edu.cnm.deepdive.macroscalculator.model.entity.Food;
-import edu.cnm.deepdive.macroscalculator.model.entity.FoodType;
+import edu.cnm.deepdive.macroscalculator.model.entity;
 import java.util.List;
 
 @Dao
