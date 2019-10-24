@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 
-import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 import java.util.Date;
 
@@ -22,9 +21,11 @@ public class Trainee {
   @NonNull
   private String name;
 
-  private int lbsToGain;
-
+  @ColumnInfo (name= "lbs_to_lose")
   private int lbsToLose;
+
+  @ColumnInfo(name = "food_preference")
+  private FoodPreference foodPreference;
 
   public long getId() { return id; }
 
@@ -47,4 +48,9 @@ public class Trainee {
   public void setName(@NonNull String name) {
     this.name = name;
   }
+
+  public enum FoodPreference {
+    VEGAN, VEGETARIAN, NONE ;
+  }
+
 }

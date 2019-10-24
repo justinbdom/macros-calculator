@@ -25,10 +25,10 @@ public class Activity {
   @ColumnInfo(name = "activity_id")
   private long id;
 
-  private int workout_duration;
+  private int duration;
 
-  public String activityName;
+  public String name;
 
-  public String activityType;
+  public String type;
 
 }

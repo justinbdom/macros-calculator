@@ -15,12 +15,6 @@ import java.util.Date;
             parentColumns = {"trainee_id"},
             childColumns = {"trainee_id"},
             onDelete = ForeignKey.CASCADE
-        ),
-        @ForeignKey(
-            entity = Diet.class,
-            childColumns = "food_type_id",
-            parentColumns = "food_type_id",
-            onDelete = ForeignKey.CASCADE
         )
     }
 )
