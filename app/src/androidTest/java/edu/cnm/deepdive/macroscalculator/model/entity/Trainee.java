@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 import java.util.Date;
 
@@ -14,6 +15,9 @@ public class Trainee {
   @ColumnInfo(name = "trainee_id")
   private long id;
 
+  @Index "trainee_id" unique = true),
+
+
   @ColumnInfo(index = true)
   @NonNull
   private Date created = new Date();
@@ -21,9 +25,10 @@ public class Trainee {
   @NonNull
   private String name;
 
+  private String email;
+
   @ColumnInfo (name= "lbs_to_lose")
   private int lbsToLose;
-
   @ColumnInfo(name = "food_preference")
   private FoodPreference foodPreference;
 

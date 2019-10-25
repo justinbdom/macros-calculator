@@ -1,11 +1,17 @@
 ## Introduction
 
-## Overview This app is great for fast results in the gym or outside, if you follow the plans and workouts simplified for each trainee. Each body type and activity level will give some great food ideas to maintain strength and build lean muscle or build size. Indoor and outdoor workouts available. 
+## Overview This app is great for fast results in the gym or outside. By calculating your macro's it will be easier to reach goal's.
+Every body type could benefit form using this app. You will be able to enter in some basic info to reach goals you want with your body.
+This will refine your knowledge to make activities more useful making it easier to display results results with less stress on the body by knowing what you need to,
+be fueled properly or just lost that weight or flex thos muscles properly. 
 
 ## Intended Users 
 
-Health and fitness enthusiasts who need calculate and monitor macros.
+*Health and fitness enthusiasts who needs help calculating macros. 
+*Here is an app that makes it easy to lose weight or gain healthy dense muscles.
+*If your are health enthusiast of any size this app can maximize your benefits and organize you fitness plan. 
 
+## Links
 * [User stories](docs/user-stories.md)
 * [Entity Relationship Diagram](docs/erd.md)
 * [Wireframe Diagram](docs/wireframe.md)

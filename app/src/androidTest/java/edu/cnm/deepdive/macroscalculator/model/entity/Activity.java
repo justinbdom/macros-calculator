@@ -31,4 +31,32 @@ public class Activity {
 
   public String type;
 
+  public long getId() {
+    return id;
+  }
+
+  public int getDuration() {
+    return duration;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getType() {
+    return type;
+  }
+
+  @ColumnInfo(index = true)
+  @NonNull
+  private Date created = new Date();
+
+  @NonNull
+  public Date getCreated() {
+    return created;
+  }
+
+  public void setCreated(@NonNull Date created) {
+    this.created = created;
+  }
 }
