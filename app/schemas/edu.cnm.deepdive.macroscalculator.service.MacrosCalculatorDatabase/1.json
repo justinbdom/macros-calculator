@@ -1,0 +1,271 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "d18767ca055e2d87e33447a9d8a7a88b",
+    "entities": [
+      {
+        "tableName": "Trainee",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`trainee_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `created` INTEGER NOT NULL, `name` TEXT NOT NULL, `email` TEXT, `lbs_to_lose` INTEGER NOT NULL, `food_preference` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "trainee_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "created",
+            "columnName": "created",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lbsToLose",
+            "columnName": "lbs_to_lose",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "foodPreference",
+            "columnName": "food_preference",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "trainee_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_Trainee_created",
+            "unique": false,
+            "columnNames": [
+              "created"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Trainee_created` ON `${TABLE_NAME}` (`created`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Food",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`food_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `created` INTEGER NOT NULL, `name` TEXT NOT NULL, `updated` INTEGER NOT NULL, `food_type_id` INTEGER, `trainee_id` INTEGER, `servingSize` INTEGER NOT NULL, `protein` TEXT, `carbs` TEXT, `veggies` TEXT, FOREIGN KEY(`trainee_id`) REFERENCES `Trainee`(`trainee_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "food_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "created",
+            "columnName": "created",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updated",
+            "columnName": "updated",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "foodTypeId",
+            "columnName": "food_type_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "traineeId",
+            "columnName": "trainee_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "servingSize",
+            "columnName": "servingSize",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "protein",
+            "columnName": "protein",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "carbs",
+            "columnName": "carbs",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "veggies",
+            "columnName": "veggies",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "food_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_Food_created",
+            "unique": false,
+            "columnNames": [
+              "created"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Food_created` ON `${TABLE_NAME}` (`created`)"
+          },
+          {
+            "name": "index_Food_updated",
+            "unique": false,
+            "columnNames": [
+              "updated"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Food_updated` ON `${TABLE_NAME}` (`updated`)"
+          },
+          {
+            "name": "index_Food_food_type_id",
+            "unique": false,
+            "columnNames": [
+              "food_type_id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Food_food_type_id` ON `${TABLE_NAME}` (`food_type_id`)"
+          },
+          {
+            "name": "index_Food_trainee_id",
+            "unique": false,
+            "columnNames": [
+              "trainee_id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Food_trainee_id` ON `${TABLE_NAME}` (`trainee_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Trainee",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "trainee_id"
+            ],
+            "referencedColumns": [
+              "trainee_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Activity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`activity_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `trainee_id` INTEGER NOT NULL, `duration` INTEGER NOT NULL, `name` TEXT, `type` TEXT, `created` INTEGER NOT NULL, FOREIGN KEY(`trainee_id`) REFERENCES `Trainee`(`trainee_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "activity_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "traineeId",
+            "columnName": "trainee_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "duration",
+            "columnName": "duration",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "created",
+            "columnName": "created",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "activity_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_Activity_trainee_id",
+            "unique": false,
+            "columnNames": [
+              "trainee_id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Activity_trainee_id` ON `${TABLE_NAME}` (`trainee_id`)"
+          },
+          {
+            "name": "index_Activity_created",
+            "unique": false,
+            "columnNames": [
+              "created"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Activity_created` ON `${TABLE_NAME}` (`created`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Trainee",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "trainee_id"
+            ],
+            "referencedColumns": [
+              "trainee_id"
+            ]
+          }
+        ]
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd18767ca055e2d87e33447a9d8a7a88b')"
+    ]
+  }
+}
