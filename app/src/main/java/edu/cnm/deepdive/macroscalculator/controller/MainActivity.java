@@ -6,6 +6,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
+import edu.cnm.deepdive.macroscalculator.R;
 
 public class MainActivity extends AppCompatActivity {
 

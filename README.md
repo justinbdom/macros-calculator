@@ -10,7 +10,7 @@ This will refine your knowledge in your diet making activities more useful. You 
 ## Intended Users 
 
 *Health and fitness enthusiasts who needs help calculating macro's. 
-*Here is an app that makes it easy to lose weight or gain healthy dense muscle's.
+*Here is an app that makes it easy to lose weight or gain healthy dense muscle.
 *If your are health enthusiast of any size, this app can maximize your benefits and organize your fitness plan. 
 *People wanting to gain healthy weight even if they don't workout. 
 
