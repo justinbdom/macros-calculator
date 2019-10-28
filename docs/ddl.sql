@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS `Food` (`trainee_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `created` INTEGER NOT NULL, `name` TEXT NOT NULL, `email` TEXT, `lbs_to_lose` INTEGER NOT NULL, `food_preference` TEXT)

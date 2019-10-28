@@ -18,6 +18,8 @@ This will refine your knowledge in your diet making activities more useful. You 
 * [User stories](docs/user-stories.md)
 * [Entity Relationship Diagram](docs/erd.md)
 * [Wireframe Diagram](docs/wireframe.md)
+* [Data Model Implementation](docs/datamodelimpl.md)
+* [Data Defenition Language](docs/ddl.md)
 
 * [x] Description
 * [x] Intended users &amp; user stories
