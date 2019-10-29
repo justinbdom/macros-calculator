@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS `food` (`food_id` INTEGER PRIMARY KEY AUTOINCREMENT N
 
 CREATE TABLE IF NOT EXISTS `activity` (`activity_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `trainee_id` INTEGER NOT NULL, `duration` INTEGER NOT NULL, `name` TEXT, `type` TEXT, `created` INTEGER NOT NULL, FOREIGN KEY(`trainee_id`) REFERENCES `Trainee`(`trainee_id`) ON UPDATE NO ACTION ON DELETE CASCADE
 
-
+CREATE INDEX IF NOT EXISTS `index_Activity_trainee_id` ON `${TABLE_NAME}` (`trainee_id`)
 
 
 
