@@ -1,5 +1,11 @@
 apply plugin: 'com.android.application'
 
+def getServiceProperty(String property){
+    Properties properties = new Properties();
+    properties.load(new FileInputStream("../credentials/fat-secret.properties"));
+    return String.format("\"%s\"", properties.getProperty(property));
+}
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -9,6 +15,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "CONSUMER_KEY", getServiceProperty("consumer_key")
+        buildConfigField "String", "CONSUMER_SECRET", getServiceProperty("consumer_secret")
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
@@ -36,11 +44,15 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.0.0'
 
-    def room_version = "2.2.0"
+    def room_version = "2.2.1"
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.facebook.stetho:stetho:1.5.1'
+
+    implementation 'com.fatsecret4j:fatsecret-platform:2.0'
+    implementation 'com.android.volley:volley:1.1.0'
+
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
