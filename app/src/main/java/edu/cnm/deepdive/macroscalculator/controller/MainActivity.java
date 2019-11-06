@@ -2,12 +2,14 @@ package edu.cnm.deepdive.macroscalculator.controller;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
+import androidx.lifecycle.ViewModelProviders;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 import edu.cnm.deepdive.macroscalculator.BuildConfig;
 import edu.cnm.deepdive.macroscalculator.R;
+import edu.cnm.deepdive.macroscalculator.viewmodel.MainViewModel;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,10 +39,13 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    B
+
     mTextMessage = (TextView) findViewById(R.id.message);
     BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
     navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    MainViewModel viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+    viewModel.getTrainees().observe(this, (trainees) -> {});
+    viewModel.searchFoods("chicken");
   }
 
 }
