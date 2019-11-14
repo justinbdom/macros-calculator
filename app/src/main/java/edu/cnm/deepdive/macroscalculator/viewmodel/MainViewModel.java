@@ -5,6 +5,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.fatsecret.platform.model.CompactFood;
@@ -13,6 +14,7 @@ import com.fatsecret.platform.services.Response;
 import com.fatsecret.platform.services.android.Request;
 import com.fatsecret.platform.services.android.ResponseListener;
 import edu.cnm.deepdive.macroscalculator.BuildConfig;
+import edu.cnm.deepdive.macroscalculator.model.entity.Food;
 import edu.cnm.deepdive.macroscalculator.model.entity.Trainee;
 import edu.cnm.deepdive.macroscalculator.service.MacrosCalculatorDatabase;
 import java.util.List;
@@ -20,6 +22,8 @@ import java.util.List;
 public class MainViewModel extends AndroidViewModel {
 
   private MacrosCalculatorDatabase database;
+
+  private MutableLiveData<List<Food>> foods;
 
   public MainViewModel(@NonNull Application application) {
     super(application);

@@ -7,7 +7,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
-import edu.cnm.deepdive.macroscalculator.BuildConfig;
 import edu.cnm.deepdive.macroscalculator.R;
 import edu.cnm.deepdive.macroscalculator.viewmodel.MainViewModel;
 
@@ -22,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
       switch (item.getItemId()) {
         case R.id.navigation_home:
-          mTextMessage.setText(R.string.title_home);
+          mTextMessage.setText(R.string.title_foods);
           return true;
         case R.id.navigation_dashboard:
           mTextMessage.setText(R.string.title_dashboard);

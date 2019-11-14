@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 def getServiceProperty(String property){
     Properties properties = new Properties();
-    properties.load(new FileInputStream("../credentials/fat-secret.properties"));
+    properties.load(new FileInputStream("../../credentials/fat-secret.properties"));
     return String.format("\"%s\"", properties.getProperty(property));
 }
 
@@ -15,6 +15,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
         buildConfigField "String", "CONSUMER_KEY", getServiceProperty("consumer_key")
         buildConfigField "String", "CONSUMER_SECRET", getServiceProperty("consumer_secret")
         javaCompileOptions {
@@ -45,6 +46,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.1.0'
+    implementation 'androidx.navigation:navigation-ui:2.1.0'
 
     implementation 'com.google.android.material:material:1.0.0'
 
@@ -57,7 +60,16 @@ dependencies {
     implementation 'com.fatsecret4j:fatsecret-platform:2.0'
 //    implementation 'com.android.volley:volley:1.1.1'
 
+    def retrofit_version = "2.6.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.2'
+
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
 }

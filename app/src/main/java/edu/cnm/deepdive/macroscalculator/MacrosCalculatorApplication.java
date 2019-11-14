@@ -19,9 +19,6 @@ public class MacrosCalculatorApplication extends Application {
             .loggingEnabled(true) // Disable for production
             .build()
     );
-    VolleyLog.setTag("Volley");
-    Log.isLoggable("Volley", Log.VERBOSE);
-    VolleyLog.DEBUG = true;
     MacrosCalculatorDatabase.setApplicationContext(this);
     MacrosCalculatorDatabase database = MacrosCalculatorDatabase.getInstance();
     new Thread(new Runnable() {

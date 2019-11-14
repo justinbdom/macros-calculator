@@ -33,13 +33,6 @@ public abstract class MacrosCalculatorDatabase extends RoomDatabase {
 
   public abstract TraineeDao getTraineeDao();
 
-//    public abstract ShoeDao getShoeDao();
-//
-//    public abstract CardDao getCardDao();
-//
-//    public abstract RoundDao getRoundDao();
-//
-//    public abstract HandDao getHandDao();
 
   private static class InstanceHolder {
 
