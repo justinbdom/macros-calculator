@@ -3,6 +3,9 @@ package edu.cnm.deepdive.macroscalculator.controller;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -12,38 +15,17 @@ import edu.cnm.deepdive.macroscalculator.viewmodel.MainViewModel;
 
 public class MainActivity extends AppCompatActivity {
 
-  private TextView mTextMessage;
-
-  private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-      = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-      switch (item.getItemId()) {
-        case R.id.navigation_home:
-          mTextMessage.setText(R.string.title_foods);
-          return true;
-        case R.id.navigation_dashboard:
-          mTextMessage.setText(R.string.title_dashboard);
-          return true;
-        case R.id.navigation_notifications:
-          mTextMessage.setText(R.string.title_notifications);
-          return true;
-      }
-      return false;
-    }
-  };
-
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
-    mTextMessage = (TextView) findViewById(R.id.message);
-    BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-    navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    BottomNavigationView navView = (BottomNavigationView) findViewById(R.id.navigation);
+    NavHostFragment hostFragment =
+        (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+    NavController navController = hostFragment.getNavController();
+    NavigationUI.setupWithNavController(navView, navController);
     MainViewModel viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
-    viewModel.getTrainees().observe(this, (trainees) -> {});
+    // TODO Move food-search related view model invocations to FoodSearchFragment
     viewModel.searchFoods("chicken");
   }
 

@@ -3,24 +3,18 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/navigation_fragments"
-  app:startDestination="@id/foodSearchFragment">
+  app:startDestination="@id/food_search_fragment">
 
   <fragment
-    android:id="@+id/foodSearchFragment"
+    android:id="@+id/food_search_fragment"
     android:name="edu.cnm.deepdive.macroscalculator.controller.FoodSearchFragment"
     android:label="fragment_food_search"
     tools:layout="@layout/fragment_food_search">
-    <action
-      android:id="@+id/to_activityFragment"
-      app:destination="@id/activityFragment"/>
   </fragment>
   <fragment
-    android:id="@+id/activityFragment"
+    android:id="@+id/activity_fragment"
     android:name="edu.cnm.deepdive.macroscalculator.controller.ActivityFragment"
     android:label="fragment_activity"
     tools:layout="@layout/fragment_activity">
-    <action
-      android:id="@+id/to_foodSearchFragment"
-      app:destination="@id/foodSearchFragment"/>
   </fragment>
 </navigation>
