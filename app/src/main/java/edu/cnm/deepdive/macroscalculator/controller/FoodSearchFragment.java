@@ -1,25 +1,28 @@
 package edu.cnm.deepdive.macroscalculator.controller;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.SearchView.OnQueryTextListener;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 import edu.cnm.deepdive.macroscalculator.R;
+import edu.cnm.deepdive.macroscalculator.model.entity.Food;
+import edu.cnm.deepdive.macroscalculator.viewmodel.MainViewModel;
 
 
-/**
- * A simple {@link Fragment} subclass. Activities that contain this fragment must implement the
- * {@link FoodSearchFragment.OnFragmentInteractionListener} interface to handle interaction events.
- * Use the {@link FoodSearchFragment#newInstance} factory method to create an instance of this
- * fragment.
- */
 public class FoodSearchFragment extends Fragment {
- // TODO Add fields for viewmodel, searchview and recyclerview
+
+  private MainViewModel viewModel;
+  private SearchView foodSearch;
+  private ListView foodList;
 
   public static FoodSearchFragment newInstance() {
     FoodSearchFragment fragment = new FoodSearchFragment();
@@ -40,13 +43,30 @@ public class FoodSearchFragment extends Fragment {
       Bundle savedInstanceState) {
     // Inflate the layout for this fragment
     View view =  inflater.inflate(R.layout.fragment_food_search, container, false);
-    //TODO get refrences to your searchview and recylerview
+    foodSearch = view.findViewById(R.id.food_search);
+    foodList = view.findViewById(R.id.food_list);
+    foodSearch.setOnQueryTextListener(new OnQueryTextListener() {
+      @Override
+      public boolean onQueryTextSubmit(String query) {
+        viewModel.searchFoods(query.trim());
+        return true;
+      }
+
+      @Override
+      public boolean onQueryTextChange(String newText) {
+        return false;
+      }
+    });
     return view;
   }
 
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    //TODO Setup viewmodel and setup observers.
+    viewModel = ViewModelProviders.of(getActivity()).get(MainViewModel.class);
+    viewModel.getFoods().observe(this, (foods) -> {
+      ArrayAdapter<Food> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, foods);
+      foodList.setAdapter(adapter);
+    });
   }
 }

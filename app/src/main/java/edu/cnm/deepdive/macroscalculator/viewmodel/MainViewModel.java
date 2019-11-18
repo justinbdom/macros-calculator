@@ -17,13 +17,14 @@ import edu.cnm.deepdive.macroscalculator.BuildConfig;
 import edu.cnm.deepdive.macroscalculator.model.entity.Food;
 import edu.cnm.deepdive.macroscalculator.model.entity.Trainee;
 import edu.cnm.deepdive.macroscalculator.service.MacrosCalculatorDatabase;
+import java.util.LinkedList;
 import java.util.List;
 
 public class MainViewModel extends AndroidViewModel {
 
   private MacrosCalculatorDatabase database;
 
-  private MutableLiveData<List<Food>> foods;
+  private MutableLiveData<List<Food>> foods = new MutableLiveData<>();
 
   public MainViewModel(@NonNull Application application) {
     super(application);
@@ -39,10 +40,17 @@ public class MainViewModel extends AndroidViewModel {
       FatsecretService service = new FatsecretService(BuildConfig.CONSUMER_KEY,
           BuildConfig.CONSUMER_SECRET);
       Response<CompactFood> response = service.searchFoods(term, 0);
-      // TODO post response.getResults() into LiveData. Below is just a test.
-      for (CompactFood food : response.getResults()) {
-        Log.d("Search result", food.getName());
+      List<Food> foods = new LinkedList<>();
+      for (CompactFood compactFood : response.getResults()) {
+        Food food = new Food();
+        food.setName(compactFood.getName());
+        foods.add(food);
       }
+      this.foods.postValue(foods);
     }).start();
+  }
+
+  public LiveData<List<Food>> getFoods() {
+    return foods;
   }
 }

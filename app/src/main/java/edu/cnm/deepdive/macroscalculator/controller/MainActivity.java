@@ -25,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
     NavController navController = hostFragment.getNavController();
     NavigationUI.setupWithNavController(navView, navController);
     MainViewModel viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
-    // TODO Move food-search related view model invocations to FoodSearchFragment
-    viewModel.searchFoods("chicken");
   }
 
 }

@@ -5,6 +5,7 @@ import android.util.Log;
 import com.android.volley.VolleyLog;
 import com.facebook.stetho.Stetho;
 import com.squareup.picasso.Picasso;
+import edu.cnm.deepdive.macroscalculator.service.GoogleSignInService;
 import edu.cnm.deepdive.macroscalculator.service.MacrosCalculatorDatabase;
 
 public class MacrosCalculatorApplication extends Application {
@@ -12,7 +13,7 @@ public class MacrosCalculatorApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-    //GoogleSignInService.setApplicationContext(this);
+    GoogleSignInService.setApplicationContext(this);
     Stetho.initializeWithDefaults(this);
     Picasso.setSingletonInstance(
         new Picasso.Builder(this)
