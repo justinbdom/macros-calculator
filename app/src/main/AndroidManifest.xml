@@ -16,7 +16,12 @@
     android:theme="@style/AppTheme">
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <activity
+      android:label="Macros Calculator"
       android:name=".controller.MainActivity">
+
+    </activity>
+    <activity
+      android:name=".controller.LoginActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>

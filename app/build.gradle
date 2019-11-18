@@ -18,6 +18,8 @@ android {
 
         buildConfigField "String", "CONSUMER_KEY", getServiceProperty("consumer_key")
         buildConfigField "String", "CONSUMER_SECRET", getServiceProperty("consumer_secret")
+        //buildConfifField '"String", "BASE_URL", "https://platform.fatsecret.com/api/"'
+        buildConfigField "String", "CLIENT_ID", '"416010645039-29td1o6rqj23up228fradge5lc28aucb.apps.googleusercontent.com"'
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
