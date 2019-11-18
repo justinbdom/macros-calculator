@@ -168,7 +168,7 @@ public class Food {
   }
 
   /**
-   * Gets trainee id.
+   * Returns the trainee of the {@link Trainee}
    *
    * @return the trainee id
    */

@@ -14,6 +14,15 @@ This will refine your knowledge in your diet making activities more useful. You 
 *If your are health enthusiast of any size, this app can maximize your benefits and organize your fitness plan. 
 *People wanting to gain healthy weight even if they don't workout. 
 
+## Copyright License    Copyright 2019, Justin Dominguez 
+                     
+                        Licensed under the Apache License, Version 2.0 (the "License");
+                        you may not use this file except in compliance with the License.
+                        You may obtain a copy of the License at
+                     
+                            http://www.apache.org/licenses/LICENSE-2.0
+
+
 ## Links
 * [User stories](docs/user-stories.md)
 * [Entity Relationship Diagram](docs/erd.md)

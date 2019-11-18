@@ -13,6 +13,9 @@ import android.widget.TextView;
 import edu.cnm.deepdive.macroscalculator.R;
 import edu.cnm.deepdive.macroscalculator.viewmodel.MainViewModel;
 
+/**
+ * The type Main activity.
+ */
 public class MainActivity extends AppCompatActivity {
 
   @Override
