@@ -14,14 +14,14 @@ Even if you just want to gain more weight or just be aware of what you are putti
 without the extra stress of trying to get fit, tracking your macros is going to point out where your food intake is at.  
 This will refine your diet knowledge, making activities more useful. You will soon be obtaining fit goal's by better helping yourself properly fuel your body and know your body.
 
-## Currnet State of Application
+## Current State of Application
 In the current state the user is able to switch between fragments. User is able log in with Google sign in.
  User is able to search food items.  
 
 ### Unimplemented Elements of Application
--add food items to daily caloric intake. 
--remove food from daily caloric intake.
--then total the daily caloric intake and display it to the user. 
+* add food items to daily caloric intake. 
+* remove food from daily caloric intake.
+* then total the daily caloric intake and display it to the user. 
 
 ##Intended Users 
 
