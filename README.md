@@ -36,15 +36,7 @@ People wanting to gain healthy weight even if they don't workout.
 3.After cloning the repository you are going to want to Checkout from Version Control.
 4.Do not open when prompted. You are going to need to import this Project from External Sources.
 5.You will need to synchronize as a Gradle build. 
-
-
-##Basic User Instructions
-1.Upon opening the application the home screen will load. 
-2. The user is presented with a Google sign in option or they can sign in with an alternate email. 
-3. After signing in the user will then be presented with an overview of daily caloric intake. 
-4. Then the user can transition to the food search find a food and add it to the daily caloric intake and then the user will have the option to remove the food item from the daily caloric intake if mistakenly added. 
  
-
 
 ##Copyright License    Copyright 2019, Justin Dominguez 
                      
@@ -61,6 +53,7 @@ People wanting to gain healthy weight even if they don't workout.
 * [Wireframe Diagram](docs/wireframe.md)
 * [Data Model Implementation](docs/datamodelimpl.md)
 * [Data Definition Language](docs/ddl.md)
+* [Basic User Instructions](docs/basicuserinst.md)
 
 * [x] Description
 * [x] Intended users &amp; user stories
