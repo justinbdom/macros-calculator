@@ -1,18 +1,23 @@
 ## Introduction
 
 ## Overview
-People who are actively working out are having a hard time paying attention to macros with their busy schedule, let this app do the work for you. 
-This application is great for fast results in the gym or outside. Here you can calculate your macro's, it will all be easier to reach goal's with less stress in trying to remember everything you need to get the body you always wanted. 
+
+People who are having a hard time trying to watch those calories and want to reach fitness goal's, let this app do the work by tracking your macros by adding food to a daily food of the total calories for the day.
+This application is great for fast results in the gym or outside. Here you can calculate your macro's and it will all be easier to reach goal's with less stress in trying to remember what you are eating and everything you need to get the body you always wanted. 
 Every body type could benefit from using this app. You will be able to enter in some basic info to either lose weight or gain healthy muscle with personal goals.
-Even if you just want to gain more weight without the extra stress of trying to get fit, implementing some of the basic foundation of this app you will benefit.  
-This will refine your knowledge in your diet making activities more useful. You will soon be obtaining fit goal's by better helping yourself properly fuel your body.
+Even if you just want to gain more weight or just be aware of what you are putting in your body daily without the extra stress of trying to get fit, tracking your macros is going to point out where your food intake is at.  
+This will refine your diet knowledge, making activities more useful. You will soon be obtaining fit goal's by better helping yourself properly fuel your body and know your body.
 
 ## Intended Users 
 
-*Health and fitness enthusiasts who needs help calculating macro's. 
-*Here is an app that makes it easy to lose weight or gain healthy dense muscle.
-*If your are health enthusiast of any size, this app can maximize your benefits and organize your fitness plan. 
-*People wanting to gain healthy weight even if they don't workout. 
+Health and fitness enthusiasts who needs help calculating macro's. 
+Here is an app that makes it easy to lose weight or gain healthy dense muscle.
+If your are health enthusiast of any size, this app can maximize your benefits and organize your fitness plan. 
+People wanting to gain healthy weight even if they don't workout. 
+
+##Build Instructions
+
+
 
 ## Copyright License    Copyright 2019, Justin Dominguez 
                      
