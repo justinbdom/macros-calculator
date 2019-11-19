@@ -22,8 +22,8 @@ People wanting to gain healthy weight even if they don't workout.
 ##Build Instructions
 
 You are going to need to clone/download the repository, after cloning the repository you are going to 
-want to Checkout from Version Control, do not open when prompted. You are going to need to import this Project from Existing Sources.
-You will need to synchronize as a Gradle build.
+want to Checkout from Version Control, do not open when prompted. You are going to need to import this Project from External Sources.
+You will need to synchronize as a Gradle build. In order to build you will need to get an API key from FatSecret.
 
 ## Basic User Instructions    
 
