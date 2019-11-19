@@ -2,10 +2,14 @@
 
 ## Overview
 
-People who are having a hard time trying to watch those calories and want to reach fitness goal's, let this app do the work by tracking your macros by adding food to a daily food of the total calories for the day.
-This application is great for fast results in the gym or outside. Here you can calculate your macro's and it will all be easier to reach goal's with less stress in trying to remember what you are eating and everything you need to get the body you always wanted. 
-Every body type could benefit from using this app. You will be able to enter in some basic info to either lose weight or gain healthy muscle with personal goals.
-Even if you just want to gain more weight or just be aware of what you are putting in your body daily without the extra stress of trying to get fit, tracking your macros is going to point out where your food intake is at.  
+People who are having a hard time trying to watch those calories and want to reach fitness goal's, let 
+this app do the work by tracking your macros by adding food to a daily food of the total calories for the day.
+This application is great for fast results in the gym or outside. Here you can calculate your macro's 
+and it will all be easier to reach goal's with less stress in trying to remember what you are eating and everything you need to get the body you always wanted. 
+Every body type could benefit from using this app. You will be able to enter in some basic info to either 
+lose weight or gain healthy muscle with personal goals.
+Even if you just want to gain more weight or just be aware of what you are putting in your body daily 
+without the extra stress of trying to get fit, tracking your macros is going to point out where your food intake is at.  
 This will refine your diet knowledge, making activities more useful. You will soon be obtaining fit goal's by better helping yourself properly fuel your body and know your body.
 
 ## Intended Users 
@@ -17,6 +21,11 @@ People wanting to gain healthy weight even if they don't workout.
 
 ##Build Instructions
 
+You are going to need to clone/download the repository, after cloning the repository you are going to 
+want to Checkout from Version Control, do not open when prompted. You are going to need to import this Project from Existing Sources.
+You will need to synchronize as a Gradle build.
+
+## Basic User Instructions    
 
 
 ## Copyright License    Copyright 2019, Justin Dominguez 
