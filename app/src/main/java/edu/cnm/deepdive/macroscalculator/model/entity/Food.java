@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey;
 import java.util.Date;
 
 /**
- * The type Food.
+ * This entity sorts foods with attributes of protein, carbs and veggies etc.
  */
 @Entity(
     foreignKeys = {
@@ -46,7 +46,7 @@ public class Food {
 
   /**
    * Food name string.
-   *
+   * Food name is required in order for trainee to search food.
    * @return the string
    */
   @NonNull
@@ -55,28 +55,28 @@ public class Food {
   }
 
   /**
-   * The Serving size.
+   * Serving size is required to display the total daily caloric intake.
    */
   public int servingSize;
 
   /**
-   * The Protein.
+   * Protein choice is required to display protein choices by type.
    */
   public String protein;
 
   /**
-   * The Carbs.
+   * Carb choice is required to display carbs by type.
    */
   public String carbs;
 
   /**
-   * The Veggies.
+   * Veggies are required to display veggie's by type.
    */
   public String veggies;
 
 
   /**
-   * Gets name.
+   * Gets name of foods.
    *
    * @return the name
    */
@@ -86,7 +86,7 @@ public class Food {
   }
 
   /**
-   * Sets name.
+   * Sets name of food.
    *
    * @param name the name
    */
@@ -95,7 +95,7 @@ public class Food {
   }
 
   /**
-   * Gets id.
+   * Gets id associated with food.
    *
    * @return the id
    */
@@ -104,7 +104,7 @@ public class Food {
   }
 
   /**
-   * Sets id.
+   * Sets id. associated with food.
    *
    * @param id the id
    */
@@ -113,7 +113,7 @@ public class Food {
   }
 
   /**
-   * Gets created.
+   * Gets date created.
    *
    * @return the created
    */
@@ -123,7 +123,7 @@ public class Food {
   }
 
   /**
-   * Sets created.
+   * Sets date created.
    *
    * @param created the created
    */
@@ -132,7 +132,7 @@ public class Food {
   }
 
   /**
-   * Gets updated.
+   * Gets updated date.
    *
    * @return the updated
    */
@@ -141,7 +141,7 @@ public class Food {
   }
 
   /**
-   * Sets updated.
+   * Sets updated date.
    *
    * @param updated the updated
    */
@@ -168,7 +168,7 @@ public class Food {
   }
 
   /**
-   * Returns the trainee of the {@link Trainee}
+   * Returns trainee id. {@link Trainee}
    *
    * @return the trainee id
    */

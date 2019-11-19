@@ -5,7 +5,7 @@
 ##Overview
 
 People who are having a hard time trying to watch those calories and want to reach fitness goal's, let 
-this app do the work by tracking your macros by adding food to a daily food of the total calories for the day.
+this app do the work by tracking your macros by simply adding food to a daily food of the total calories for the day.
 This application is great for fast results in the gym or outside. Here you can calculate your macro's 
 and it will all be easier to reach goal's with less stress in trying to remember what you are eating and everything you need to get the body you always wanted. 
 Every body type could benefit from using this app. You will be able to enter in some basic info to either 
@@ -55,8 +55,3 @@ People wanting to gain healthy weight even if they don't workout.
 * [Data Definition Language](docs/ddl.md)
 * [Basic User Instructions](docs/basicuserinst.md)
 
-* [x] Description
-* [x] Intended users &amp; user stories
-* [x] Entity-relationship diagrams (ERDs)
-* [x] Wireframes
-* [x] User Stories
