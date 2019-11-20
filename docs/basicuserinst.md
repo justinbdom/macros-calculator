@@ -1,4 +1,5 @@
 ##Basic User Instructions
+
 1.Upon opening the application the home screen will load. 
 2. The user is presented with a Google sign in option or they can sign in with an alternate email. 
 3. After signing in the user will then be presented with an overview of daily caloric intake. 
