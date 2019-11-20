@@ -173,7 +173,7 @@ public class Food {
   }
 
   /**
-   * Returns trainee id. {@link Trainee}
+   * Returns trainee id to food. {@link Trainee}
    *
    * @return the trainee id
    */
@@ -182,7 +182,7 @@ public class Food {
   }
 
   /**
-   * Sets trainee id.
+   * Sets trainee id to food.
    *
    * @param traineeId the trainee id
    */

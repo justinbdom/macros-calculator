@@ -59,7 +59,7 @@ public class Trainee {
   public Date getCreated() { return created; }
 
   /**
-   * Sets created.
+   * Sets created date.
    *
    * @param created the created
    */
@@ -68,7 +68,7 @@ public class Trainee {
   }
 
   /**
-   * Gets name.
+   * Gets name of Trainee.
    *
    * @return the name
    */
@@ -78,7 +78,7 @@ public class Trainee {
   }
 
   /**
-   * Sets name.
+   * Sets name of Trainee.
    *
    * @param name the name
    */
@@ -87,7 +87,7 @@ public class Trainee {
   }
 
   /**
-   * Gets email.
+   * Gets email of Trainee.
    *
    * @return the email
    */
@@ -96,7 +96,7 @@ public class Trainee {
   }
 
   /**
-   * Sets email.
+   * Sets email of Trainee.
    *
    * @param email the email
    */
@@ -105,7 +105,7 @@ public class Trainee {
   }
 
   /**
-   * Gets lbs to lose.
+   * Gets lbs Trainee wants to lose.
    *
    * @return the lbs to lose
    */
@@ -114,16 +114,16 @@ public class Trainee {
   }
 
   /**
-   * Sets lbs to lose.
+   * Sets lbs Trainee wants to lose.
    *
-   * @param lbsToLose the lbs to lose
+   * @param lbsToLose the lbs to lose.
    */
   public void setLbsToLose(int lbsToLose) {
     this.lbsToLose = lbsToLose;
   }
 
   /**
-   * Gets food preference.
+   * Gets food preference Trainee chooses.
    *
    * @return the food preference
    */
