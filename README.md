@@ -1,8 +1,8 @@
-#Macros Calculator
+# Macros Calculator
 
-##Introduction
+## Introduction
 
-##Overview
+## Overview
 
 People who are having a hard time trying to watch those calories and want to reach fitness goal's, let 
 this app do the work by tracking your macros by simply adding food to a daily food of the total calories for the day.
@@ -23,14 +23,14 @@ In the current state the user is able to switch between fragments. User is able 
 * remove food from daily caloric intake.
 * then total the daily caloric intake and display it to the user. 
 
-##Intended Users 
+## Intended Users 
 
 Health and fitness enthusiasts who needs help calculating macro's. 
 Here is an app that makes it easy to lose weight or gain healthy dense muscle.
 If your are health enthusiast of any size, this app can maximize your benefits and organize your fitness plan. 
 People wanting to gain healthy weight even if they don't workout. 
 
-##Build Instructions
+## Build Instructions
 1.In order to build you will need to get an API key from FatSecret. [FatSecretPlatformAPI](https://platform.fatsecret.com/api/)
 2.You are going to need to clone/download the repository.
 3.After cloning the repository you are going to want to Checkout from Version Control.
@@ -38,7 +38,7 @@ People wanting to gain healthy weight even if they don't workout.
 5.You will need to synchronize as a Gradle build. 
  
 
-##Copyright License    Copyright 2019, Justin Dominguez 
+## Copyright License    Copyright 2019, Justin Dominguez 
                      
                         Licensed under the Apache License, Version 2.0 (the "License");
                         you may not use this file except in compliance with the License.
@@ -47,7 +47,7 @@ People wanting to gain healthy weight even if they don't workout.
                             http://www.apache.org/licenses/LICENSE-2.0
 
 
-##Links
+## Links
 * [User stories](docs/user-stories.md)
 * [Entity Relationship Diagram](docs/erd.md)
 * [Wireframe Diagram](docs/wireframe.md)
