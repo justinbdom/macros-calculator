@@ -53,4 +53,8 @@ public class MainViewModel extends AndroidViewModel {
   public LiveData<List<Food>> getFoods() {
     return foods;
   }
+
+  public void saveFoods(List<Food> foods) {
+    new Thread(() -> database.getFoodDao().insert(foods)).start();
+  }
 }

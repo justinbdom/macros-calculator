@@ -16,13 +16,13 @@ public interface ActivityDao {
 
 
   @Insert
-  long[] insert(Activity activities);
+  long insert(Activity activity);
 
   @Insert
   List<Long> insert(Collection<Activity> activities);
 
   @Query("SELECT * FROM Activity ORDER BY name ASC")
-  LiveData<List<Activity>> getById(long traineeId);
+  LiveData<List<Activity>> getAll();
 
   @Update
   int update(Activity activities);

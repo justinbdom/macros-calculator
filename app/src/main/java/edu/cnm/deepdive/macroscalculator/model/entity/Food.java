@@ -5,6 +5,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 import java.util.Date;
 
@@ -43,6 +44,10 @@ public class Food {
 
   @ColumnInfo(name = "trainee_id", index = true)
   private Long traineeId;
+
+  @Ignore
+  private boolean selected;
+
 
   /**
    * Food name string.
@@ -183,6 +188,14 @@ public class Food {
    */
   public void setTraineeId(Long traineeId) {
     this.traineeId = traineeId;
+  }
+
+  public boolean isSelected() {
+    return selected;
+  }
+
+  public void setSelected(boolean selected) {
+    this.selected = selected;
   }
 
   @NonNull

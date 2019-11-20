@@ -6,6 +6,8 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverter;
 import androidx.room.TypeConverters;
+import edu.cnm.deepdive.macroscalculator.model.dao.ActivityDao;
+import edu.cnm.deepdive.macroscalculator.model.dao.FoodDao;
 import edu.cnm.deepdive.macroscalculator.model.dao.TraineeDao;
 import edu.cnm.deepdive.macroscalculator.model.entity.Activity;
 import edu.cnm.deepdive.macroscalculator.model.entity.Food;
@@ -33,6 +35,9 @@ public abstract class MacrosCalculatorDatabase extends RoomDatabase {
 
   public abstract TraineeDao getTraineeDao();
 
+public abstract FoodDao getFoodDao();
+
+public abstract ActivityDao getActivityDao();
 
   private static class InstanceHolder {
 

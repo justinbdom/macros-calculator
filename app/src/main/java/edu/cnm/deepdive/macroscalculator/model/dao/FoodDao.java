@@ -14,6 +14,9 @@ public interface FoodDao {
   @Insert
   long insert(Food food);
 
+  @Insert
+  List<Long> insert(List<Food> foods);
+
   @Query("SELECT * FROM Food ORDER BY name ASC")
   LiveData<List<Food>> getAll();
 

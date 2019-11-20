@@ -13,9 +13,12 @@ import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.SearchView.OnQueryTextListener;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import edu.cnm.deepdive.macroscalculator.R;
 import edu.cnm.deepdive.macroscalculator.model.entity.Food;
+import edu.cnm.deepdive.macroscalculator.view.FoodItemAdapter;
 import edu.cnm.deepdive.macroscalculator.viewmodel.MainViewModel;
+import java.util.List;
 
 
 public class FoodSearchFragment extends Fragment {
@@ -23,6 +26,7 @@ public class FoodSearchFragment extends Fragment {
   private MainViewModel viewModel;
   private SearchView foodSearch;
   private ListView foodList;
+  private FoodItemAdapter adapter;
 
   public static FoodSearchFragment newInstance() {
     FoodSearchFragment fragment = new FoodSearchFragment();
@@ -57,6 +61,11 @@ public class FoodSearchFragment extends Fragment {
         return false;
       }
     });
+    FloatingActionButton saveFoods = view.findViewById(R.id.save_foods);
+    saveFoods.setOnClickListener((v) -> {
+      List<Food> selected = adapter.getSelected();
+      viewModel.saveFoods(selected);
+    });
     return view;
   }
 
@@ -65,7 +74,7 @@ public class FoodSearchFragment extends Fragment {
     super.onViewCreated(view, savedInstanceState);
     viewModel = ViewModelProviders.of(getActivity()).get(MainViewModel.class);
     viewModel.getFoods().observe(this, (foods) -> {
-      ArrayAdapter<Food> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, foods);
+      adapter = new FoodItemAdapter(getContext(), foods);
       foodList.setAdapter(adapter);
     });
   }
